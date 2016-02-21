@@ -90,8 +90,8 @@ let s:source = {
 
 " }}}
 
-command! -nargs=? MPlay call unite#sources#radio#play(<q-args>)
-command! MStop call unite#sources#radio#stop()
+command! -nargs=? UniteMPlay call unite#sources#radio#play(<q-args>)
+command! UniteMStop call unite#sources#radio#stop()
 
 if empty(s:play_cmd)
     if executable('/Applications/VLC.app/Contents/MacOS/VLC')
