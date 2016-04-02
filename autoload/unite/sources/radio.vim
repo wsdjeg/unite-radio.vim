@@ -96,6 +96,8 @@ command! UniteMStop call unite#sources#radio#stop()
 if empty(s:play_cmd)
     if executable('/Applications/VLC.app/Contents/MacOS/VLC')
         let s:play_cmd = '/Applications/VLC.app/Contents/MacOS/VLC -Irc --quiet'
+    elseif executable('mvp')
+        let s:play_cmd = 'mvp'
     elseif executable('mplayer')
         let s:play_cmd = 'mplayer -quiet -playlist'
     elseif executable('cvlc')
