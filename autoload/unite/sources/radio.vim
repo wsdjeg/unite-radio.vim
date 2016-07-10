@@ -129,7 +129,7 @@ fun! unite#sources#radio#stop() "{{{
     let s:process = {}
 endfunction "}}}
 
-au VimLeavePre * MStop
+au VimLeavePre * UniteMStop
 
 fun! s:widemessage(msg) "{{{
     let x=&ruler | let y=&showcmd
